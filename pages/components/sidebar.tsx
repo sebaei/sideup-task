@@ -9,12 +9,8 @@ const Sidebar = () => {
 
   return (
     <>
-      <div>
-        <img
-          src={sideupLogo}
-          alt="logo"
-          className="w-14 h-8 object-contain bg-white"
-        />
+      <div className="flex flex-col align-center bg-white">
+        <img src={sideupLogo} alt="logo" className="w-14 h-8 object-contain" />
         {sidebarItems.map((item, index) => (
           <div key={index} className="flex flex-row">
             <img src={disk} className="w-4 h-4" />
