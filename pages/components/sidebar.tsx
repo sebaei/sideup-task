@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { useState } from "react";
 import sideupLogo from "../../public/assets/sideupLogo.jpg";
-import disk from "../../public/assets/sideupLogo.jpg";
+import disk from "../../public/assets/disk.jpg";
 
-import { sidebarItems } from "../../public/assets/constants";
+import { sidebarItems } from "../../public/constants";
 
 const Sidebar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,10 +11,14 @@ const Sidebar = () => {
   return (
     <>
       <div className="flex flex-col align-center bg-white">
-        <img src={sideupLogo} alt="logo" className="w-14 h-8 object-contain" />
+        <Image
+          src={sideupLogo}
+          alt="logo"
+          className="w-full m-auto h-8 object-contain"
+        />
         {sidebarItems.map((item, index) => (
           <div key={index} className="flex flex-row">
-            <img src={disk} className="w-4 h-4" />
+            <Image src={disk} alt="disk" className="w-5 h-6" />
             <span className="ml-2">{item}</span>
           </div>
         ))}
