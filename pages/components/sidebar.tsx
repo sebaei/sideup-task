@@ -4,6 +4,7 @@ import sideupLogo from "../../public/assets/sideupLogo.jpg";
 import disk from "../../public/assets/disk.jpg";
 
 import { sidebarItems } from "../../public/constants";
+// import { Disk } from "../../public/constants";
 
 const Sidebar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,6 +20,7 @@ const Sidebar = () => {
         {sidebarItems.map((item, index) => (
           <div key={index} className="flex flex-row">
             <Image src={disk} alt="disk" className="w-5 h-6" />
+            {/* <Disk fill={"#CB3E90"} /> */}
             <span className="ml-2">{item}</span>
           </div>
         ))}
