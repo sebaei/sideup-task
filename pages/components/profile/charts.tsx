@@ -55,6 +55,47 @@ export const RenderDelivery = () => {
   );
 };
 
+const barChartData = [
+  {
+    name: "Week 1",
+    sales: 55000,
+  },
+  {
+    name: "Week 2",
+    sales: 40000,
+  },
+  {
+    name: "Week 3",
+    sales: 58000,
+  },
+  {
+    name: "Week 4",
+    sales: 58000,
+  },
+];
+
+export const RenderBarChart = () => {
+  return (
+    <ResponsiveContainer width="90%" height={300} className="block sm:hidden">
+      <BarChart
+        data={barChartData}
+        margin={{
+          top: 12,
+          right: 20,
+          left: 20,
+          bottom: 5,
+        }}
+      >
+        <CartesianGrid strokeDasharray="5 5" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Bar dataKey="sales" fill="gray" barSize={30} />
+        <Line dataKey="sales" fill="green" />
+      </BarChart>
+    </ResponsiveContainer>
+  );
+};
+
 const data = [
   { name: "", "Total Cash": 42000, "Net Sales": 40000, "Delivery Fees": 30000 },
   {
@@ -86,7 +127,7 @@ const data = [
 
 export const RenderLineChart = () => {
   return (
-    <ResponsiveContainer width="60%" height={300}>
+    <ResponsiveContainer width="60%" height={300} className="sm:block hidden">
       <LineChart data={data}>
         <Line type="monotone" dataKey="Net Sales" stroke="#17A21A" />
         <Line type="monotone" dataKey="Total Cash" stroke="#DCC320" />
@@ -114,7 +155,7 @@ const COLORS = ["#17A21A", "#EDD329"];
 
 export const RenderPieChart = () => {
   return (
-    <PieChart width={100} height={100} className="hidden md:flex ">
+    <PieChart width={100} height={100} className="block sm:hidden md:block">
       <Pie
         data={pieData}
         cx="50%"
@@ -138,7 +179,7 @@ export const CircleProgressBar = ({ progress }: any) => {
   const circumference = radius * 2 * Math.PI;
 
   return (
-    <div className="relative hidden md:flex">
+    <div className="relative block sm:hidden md:block">
       <svg width={100} height={100}>
         <circle
           stroke="gray"

@@ -13,6 +13,8 @@ import styles from "../../public/style";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("Dashboard");
+
   return (
     <>
       <div className="hidden sm:flex w-[60%] justify-end ml-auto  ">
@@ -82,14 +84,26 @@ const Navbar = () => {
           {sidebarItems.map((item, index) => (
             <div
               key={index}
-              className={`flex flex-row border-transparent cursor-pointer items-center pl-3  ${
+              className={`flex flex-row border-l-2 cursor-pointer items-center pl-3  ${
                 sidebarItems.length - 1 !== index ? "my-3" : "mt-20"
-              } active:border-l-[#CB3E90] active:border-2`}
-              onClick={() => setMobileMenuOpen(false)}
+              } ${
+                activeTab === item
+                  ? "border-l-[#CB3E90]"
+                  : "border-l-transparent"
+              }  `}
+              onClick={() => {
+                setMobileMenuOpen(false), setActiveTab(item);
+              }}
             >
               {/* <Image src={disk} alt="disk" className="w-4 h-4" /> */}
-              <PurpleDisk />
-              <span className={`ml-2  active:text-[#CB3E90]`}>{item}</span>
+              {activeTab === item ? <PurpleDisk /> : <BlackDisk />}
+              <span
+                className={`ml-2  ${
+                  activeTab === item ? "text-[#CB3E90]" : "text-black"
+                } ${styles.sidebarTitle}`}
+              >
+                {item}
+              </span>
             </div>
           ))}
         </div>

@@ -3,6 +3,7 @@ import styles from "../../../public/style";
 import {
   CircleProgressBar,
   HalfCircleProgressBar,
+  RenderBarChart,
   RenderDelivery,
   RenderLineChart,
   RenderPieChart,
@@ -46,8 +47,8 @@ const StatsGrid = () => {
             2,755,890 LE
           </p>
         </div>
-        <div className="flex">
-          <div className="flex flex-col w-[40$] justify-around pr-3">
+        <div className="flex flex-col sm:flex-row">
+          <div className="flex sm:flex-col w-[40$] justify-around pr-3 mb-2">
             <div className="flex flex-col justify-around bg-gray-100 border-l-blue-500 border-l-2 rounded-lg p-1">
               <div className="flex">
                 <BlueDisk />
@@ -82,6 +83,7 @@ const StatsGrid = () => {
             </div>
           </div>
           {/* <div className="w-2/3 mt-4 "> */}
+          <RenderBarChart />
           <RenderLineChart />
           {/* </div> */}
         </div>
@@ -201,7 +203,7 @@ const StatsGrid = () => {
         </div>
         <div className="flex justify-center flex-wrap ml-2 mt-6">
           <CircleProgressBar progress={75} />
-          <div className="block md:hidden text-black bg-gray-300 rounded-md text-center p-4">
+          <div className="hidden sm:block md:hidden text-black bg-gray-300 rounded-md text-center p-4">
             10
           </div>
           <div className="flex flex-col">
@@ -235,7 +237,7 @@ const StatsGrid = () => {
           <div className="mx-1">
             <RenderPieChart />
           </div>
-          <div className="block md:hidden text-black bg-gray-300 rounded-md text-center p-4">
+          <div className="hidden sm:block md:hidden text-black bg-gray-300 rounded-md text-center p-4">
             10
           </div>
           <div className="flex justify-evenly">
@@ -340,7 +342,7 @@ const StatsGrid = () => {
               } border-b-[1.5px] py-2`}
             >
               <div
-                className={` bg-gradient-to-r bg-black ${attempt.color} to-white w-5 h-3 mr-4`}
+                className={` bg-gradient-to-r ${attempt.color} to-white w-5 h-3 mr-4`}
               />
               <p className={`${styles.gridTitle}`}>{attempt.title}</p>
               <p className="ml-auto">{attempt.total}</p>
