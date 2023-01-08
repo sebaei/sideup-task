@@ -3,7 +3,7 @@ import { useState } from "react";
 import sideupLogo from "../../public/assets/sideupLogo.jpg";
 import styles from "../../public/style";
 import { sidebarItems } from "../../public/constants";
-import { PurpleDisk, BlackDisk } from "../../public/constants";
+import { SVG } from "./svgs";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState("Dashboard");
@@ -25,7 +25,11 @@ const Sidebar = () => {
           onClick={() => setActiveTab(item)}
         >
           {/* <Image src={disk} alt="disk" className="w-4 h-4" /> */}
-          {activeTab === item ? <PurpleDisk /> : <BlackDisk />}
+          {activeTab === item ? (
+            <>{SVG.Disk("#CB3E90")}</>
+          ) : (
+            <>{SVG.Disk("#000000")}</>
+          )}
 
           <span
             className={`ml-2  ${

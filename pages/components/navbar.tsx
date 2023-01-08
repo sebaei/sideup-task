@@ -8,8 +8,8 @@ import USFlag from "../../public/assets/USFlag.png";
 import EgyptFlag from "../../public/assets/EgyptFlag.png";
 import { useState } from "react";
 import { sidebarItems } from "../../public/constants";
-import { PurpleDisk, BlackDisk } from "../../public/constants";
 import styles from "../../public/style";
+import { SVG } from "./svgs";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -96,7 +96,11 @@ const Navbar = () => {
               }}
             >
               {/* <Image src={disk} alt="disk" className="w-4 h-4" /> */}
-              {activeTab === item ? <PurpleDisk /> : <BlackDisk />}
+              {activeTab === item ? (
+                <>{SVG.Disk("#CB3E90")}</>
+              ) : (
+                <>{SVG.Disk("#000000")}</>
+              )}
               <span
                 className={`ml-2  ${
                   activeTab === item ? "text-[#CB3E90]" : "text-black"

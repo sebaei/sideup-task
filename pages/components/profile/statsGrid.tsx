@@ -1,5 +1,6 @@
-import { Attempts, BlueDisk } from "../../../public/constants";
+import { Attempts } from "../../../public/constants";
 import styles from "../../../public/style";
+import { SVG } from "../svgs";
 import {
   CircleProgressBar,
   HalfCircleProgressBar,
@@ -40,8 +41,8 @@ const StatsGrid = () => {
         </div>
       </div>
       <div className="col-span-2 sm:col-span-3 row-span-2 bg-white p-4 rounded-lg shadow-lg ">
-        <div className="flex ">
-          <BlueDisk />
+        <div className="flex items-center ">
+          {SVG.Disk("#4278B8")}
           <p className={`${styles.gridTitle} ml-2`}>Net Sales</p>
           <p className="ml-auto bg-[#4278B8] text-white p-2 rounded mb-3 font-bold text-[18px]">
             2,755,890 LE
@@ -51,7 +52,7 @@ const StatsGrid = () => {
           <div className="flex sm:flex-col w-[40$] justify-around pr-3 mb-2">
             <div className="flex flex-col justify-around bg-gray-100 border-l-blue-500 border-l-2 rounded-lg p-1">
               <div className="flex">
-                <BlueDisk />
+                {SVG.Disk("#4278B8")}
                 <p>Total Cash</p>
               </div>
               <span className="my-3">2,755,890 LE</span>
@@ -67,7 +68,7 @@ const StatsGrid = () => {
             </div>
             <div className="flex flex-col justify-around bg-gray-100 border-l-blue-500 border-l-2 rounded-lg p-2 mt-2">
               <div className="flex">
-                <BlueDisk />
+                {SVG.Disk("#4278B8")}
                 <p>Delivery Fees</p>
               </div>
               <span className="my-3">2,755,890 LE</span>
@@ -89,8 +90,8 @@ const StatsGrid = () => {
         </div>
       </div>
       <div className="flex flex-col  bg-white rounded-lg shadow-lg px-4">
-        <div className="flex pt-4">
-          <BlueDisk />
+        <div className="flex pt-4 items-center">
+          {SVG.Disk("#4278B8")}
           <p className={`${styles.gridTitle} ml-2`}>Pending</p>
         </div>
 
@@ -156,8 +157,8 @@ const StatsGrid = () => {
         </div>
       </div>
       <div className="flex flex-col  bg-white rounded-lg shadow-lg p-4">
-        <div className="flex">
-          <BlueDisk />
+        <div className="flex items-center">
+          {SVG.Disk("#4278B8")}
           <p className={`${styles.gridTitle} ml-2`}>Actions</p>
         </div>
 
@@ -170,7 +171,7 @@ const StatsGrid = () => {
       </div>
       <div className="col-span-2 row-span-2 hidden sm:flex flex-col justify-around  bg-white rounded-lg shadow-lg p-4">
         <div className="flex">
-          <BlueDisk />
+          {SVG.Disk("#4278B8")}
           <p className={`${styles.gridTitle} ml-2`}>Attempts</p>
           <div className="text-black bg-gray-300 p-2 rounded-md font-semibold text-center ml-auto">
             30
@@ -195,8 +196,8 @@ const StatsGrid = () => {
         })}
       </div>
       <div className="bg-white rounded-lg shadow-lg p-4">
-        <div className="flex justify-start ">
-          <BlueDisk />
+        <div className="flex justify-start items-center">
+          {SVG.Disk("#4278B8")}
           <p className={`${styles.gridTitle} ml-2`}>Daily Orders</p>
         </div>
         <div className="flex justify-center flex-wrap ml-2 mt-6">
@@ -227,8 +228,8 @@ const StatsGrid = () => {
         </div>
       </div>
       <div className="bg-white w-full rounded-lg shadow-lg p-4">
-        <div className="flex">
-          <BlueDisk />
+        <div className="flex items-center">
+          {SVG.Disk("#4278B8")}
           <p className={`${styles.gridTitle} ml-2`}>Success Rate</p>
         </div>
         <div className="flex justify-center flex-wrap items-center mt-4">
@@ -255,8 +256,8 @@ const StatsGrid = () => {
         </div>
       </div>
       <div className=" bg-white rounded-lg shadow-lg p-4 flex flex-col">
-        <div className="flex">
-          <BlueDisk />
+        <div className="flex items-center">
+          {SVG.Disk("#4278B8")}
           <p className={`${styles.gridTitle} ml-2`}>New Customers</p>
         </div>
         <div className="flex flex-wrap justify-center mt-6 ml-2">
@@ -288,8 +289,8 @@ const StatsGrid = () => {
         </div>
       </div>
       <div className="flex flex-col bg-white rounded-lg shadow-lg p-4">
-        <div className="flex">
-          <BlueDisk />
+        <div className="flex items-center">
+          {SVG.Disk("#4278B8")}
           <p className={`${styles.gridTitle} ml-2`}>Gifts</p>
         </div>
         <div className="flex my-auto justify-center items-center">
@@ -322,8 +323,8 @@ const StatsGrid = () => {
         </div>
       </div>
       <div className="col-span-2 row-span-2 flex sm:hidden flex-col justify-around  bg-white rounded-lg shadow-lg p-4">
-        <div className="flex">
-          <BlueDisk />
+        <div className="flex items-center">
+          {SVG.Disk("#4278B8")}
           <p className={`${styles.gridTitle} ml-2`}>Attempts</p>
           <div className="text-black bg-gray-300 p-2 rounded-md font-semibold text-center ml-auto">
             30

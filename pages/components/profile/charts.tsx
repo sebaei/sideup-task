@@ -32,11 +32,6 @@ const deliveryData = [
 export const RenderTotalCash = () => {
   return (
     <BarChart width={50} height={30} data={totalCashData}>
-      {/* <XAxis dataKey="x" />
-      <YAxis /> */}
-      {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
-      {/* <Tooltip />
-      <Legend /> */}
       <Bar dataKey="y" fill="#27D02B" />
     </BarChart>
   );
@@ -45,11 +40,6 @@ export const RenderTotalCash = () => {
 export const RenderDelivery = () => {
   return (
     <BarChart width={50} height={30} data={deliveryData}>
-      {/* <XAxis dataKey="x" />
-      <YAxis /> */}
-      {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
-      {/* <Tooltip />
-      <Legend /> */}
       <Bar dataKey="y" fill="#ED565C" />
     </BarChart>
   );
