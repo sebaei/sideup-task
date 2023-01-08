@@ -6,7 +6,7 @@ import styles from "../../../public/style";
 const Header = () => {
   return (
     <>
-      <div className="hidden md:flex w-full">
+      <div className="hidden lg:flex w-full">
         <div
           className={`flex items-center w-[48%] h-[80px] bg-white p-4 rounded-lg shadow-lg `}
         >

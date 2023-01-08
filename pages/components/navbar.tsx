@@ -35,7 +35,7 @@ const Navbar = () => {
           className="my-auto cursor-pointer"
         />
         <Image src={profile} alt="profile" className="my-auto cursor-pointer" />
-        <div className="hidden md:flex flex-col ">
+        <div className="hidden lg:flex flex-col ">
           <div className="flex cursor-pointer mt-2 mr-5">
             <p className={`${styles.languages}`}>EN |</p>
             <Image
@@ -50,7 +50,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="flex sm:hidden justify-evenly items-center bg-white pt-10">
+      <div className="flex sm:hidden w-full mx-0 justify-evenly items-center bg-white pt-10">
         <Image src={profile} alt="profile" className="my-auto cursor-pointer" />
         <Image
           src={sideupLogo}

@@ -14,10 +14,7 @@ const StatsGrid = () => {
     <div className="grid sm:grid-cols-6 grid-cols-2 gap-4 mt-4">
       <div className="col-span-2 flex sm:hidden justify-around items-end py-5 text-[18px] font-semibold bg-white rounded-lg shadow-lg">
         <div className="flex flex-col w-[15%] text-center ">
-          <p>
-            To Be <br />
-            Picked
-          </p>
+          <p>To Be Picked</p>
           <div className="text-black bg-gray-300 rounded-md text-center py-4">
             45
           </div>
@@ -162,8 +159,8 @@ const StatsGrid = () => {
           <p className={`${styles.gridTitle} ml-2`}>Actions</p>
         </div>
 
-        <div className="flex w-full justify-evenly items-center py-2 my-auto rounded-md bg-gray-100">
-          <p className="border-b-red-400 border-b-2 font-bold text-[18px]">
+        <div className="flex w-full flex-wrap justify-evenly items-center py-2 my-auto rounded-md bg-gray-100">
+          <p className="border-b-red-400 border-b-2 font-bold text-[18px] mr-2">
             10
           </p>{" "}
           <button className="underline text-blue-400">Take action</button>
@@ -204,6 +201,9 @@ const StatsGrid = () => {
         </div>
         <div className="flex justify-center flex-wrap ml-2 mt-6">
           <CircleProgressBar progress={75} />
+          <div className="block md:hidden text-black bg-gray-300 rounded-md text-center p-4">
+            10
+          </div>
           <div className="flex flex-col">
             <div className="flex flex-wrap">
               <p className="text-[16px] mr-1">63%</p>
@@ -235,7 +235,10 @@ const StatsGrid = () => {
           <div className="mx-1">
             <RenderPieChart />
           </div>
-          <div className="flex">
+          <div className="block md:hidden text-black bg-gray-300 rounded-md text-center p-4">
+            10
+          </div>
+          <div className="flex justify-evenly">
             <div className="flex flex-col mr-1 items-center">
               <p className="text-[14px] font-bold">Net Sales</p>
               <div className="text-black bg-gray-300 rounded-md text-center p-3">
@@ -258,6 +261,9 @@ const StatsGrid = () => {
         </div>
         <div className="flex flex-wrap justify-center mt-6 ml-2">
           <HalfCircleProgressBar progress={10} />
+          <div className="block lg:hidden text-black bg-gray-300 rounded-md text-center p-4">
+            10
+          </div>
 
           <div className="flex flex-col">
             <div className="flex flex-wrap">
@@ -286,8 +292,8 @@ const StatsGrid = () => {
           <BlueDisk />
           <p className={`${styles.gridTitle} ml-2`}>Gifts</p>
         </div>
-        <div className="flex my-auto items-center">
-          <div className="flex items-center bg-gray-100 p-2 rounded-md mr-2">
+        <div className="flex my-auto justify-center items-center">
+          <div className="flex items-center  bg-gray-100 p-2 rounded-md mr-2">
             <p className="border-b-green-400 border-b-2 font-bold text-[18px]">
               10
             </p>
@@ -305,7 +311,7 @@ const StatsGrid = () => {
               />
             </svg>
           </div>
-          <div className="flex flex-col">
+          <div className="hidden lg:flex flex-col">
             <div className="bg-gray-200 w-[80%] h-2 rounded-md">
               <div className="bg-green-500 rounded-md h-2 w-[75%]" />
             </div>

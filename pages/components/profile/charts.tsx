@@ -114,7 +114,7 @@ const COLORS = ["#17A21A", "#EDD329"];
 
 export const RenderPieChart = () => {
   return (
-    <PieChart width={100} height={100}>
+    <PieChart width={100} height={100} className="hidden md:flex ">
       <Pie
         data={pieData}
         cx="50%"
@@ -138,7 +138,7 @@ export const CircleProgressBar = ({ progress }: any) => {
   const circumference = radius * 2 * Math.PI;
 
   return (
-    <div className="relative">
+    <div className="relative hidden md:flex">
       <svg width={100} height={100}>
         <circle
           stroke="gray"
@@ -169,7 +169,7 @@ export const HalfCircleProgressBar = ({ progress }: any) => {
   const circumference = radius * Math.PI;
 
   return (
-    <div className="relative">
+    <div className="relative hidden lg:flex">
       <svg width={100} height={100}>
         <circle
           stroke="gray"

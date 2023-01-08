@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="relative flex">
       <Sidebar />
-      <div className="flex px-10 flex-col bg-[#F7F7F7]">
+      <div className="flex w-full sm:px-6 flex-col bg-[#F7F7F7]">
         <Navbar />
         <Profile />
       </div>
