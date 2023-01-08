@@ -126,32 +126,32 @@ export const BlueDisk = () => {
 export const Attempts = [
   {
     title: "Successfull Attempts",
-    color: "from-green-500",
+    color: "green-500",
     total: 25,
   },
   {
     title: "From First Attempt",
-    color: "from-orange-600",
+    color: "orange-600",
     total: 10,
   },
   {
     title: "From Second Attempt",
-    color: "from-orange-600",
+    color: "orange-600",
     total: 3,
   },
   {
     title: "From Third Attempt",
-    color: "from-orange-600",
+    color: "orange-600",
     total: 12,
   },
   {
     title: "Returned",
-    color: "from-red-600",
+    color: "red-400",
     total: 4,
   },
   {
     title: "Canceled",
-    color: "from-black",
+    color: "black",
     total: 1,
   },
 ];

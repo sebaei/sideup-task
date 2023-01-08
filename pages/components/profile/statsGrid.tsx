@@ -186,9 +186,7 @@ const StatsGrid = () => {
                   : "border-b-transparent"
               } border-b-[1.5px] py-2`}
             >
-              <div
-                className={`bg-gradient-to-r ${attempt.color} to-white w-5 h-4 mr-4`}
-              />
+              <div className={`bg-${attempt.color} w-4 rounded-sm h-3 mr-4`} />
 
               <p>{attempt.title}</p>
               <p className="ml-auto">{attempt.total}</p>
@@ -341,9 +339,7 @@ const StatsGrid = () => {
                   : "border-b-transparent"
               } border-b-[1.5px] py-2`}
             >
-              <div
-                className={` bg-gradient-to-r ${attempt.color} to-white w-5 h-3 mr-4`}
-              />
+              <div className={` bg-${attempt.color} w-4 rounded-sm h-3 mr-4`} />
               <p className={`${styles.gridTitle}`}>{attempt.title}</p>
               <p className="ml-auto">{attempt.total}</p>
             </div>
