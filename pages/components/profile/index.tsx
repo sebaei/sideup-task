@@ -2,7 +2,7 @@ import profilePicture from "../../public/assets/profilePicture.jpg";
 import singleOrder from "../../public/assets/singleOrder.jpg";
 import bulkOrder from "../../public/assets/bulkOrder.jpg";
 import Image from "next/image";
-import { profileIcons } from "../../public/constants";
+import { profileIcons } from "../../../public/constants";
 import {
   LineChart,
   Line,
@@ -15,7 +15,7 @@ import {
   Cell,
 } from "recharts";
 
-import { BlueDisk } from "../../public/constants";
+import { BlueDisk } from "../../../public/constants";
 
 const data = [
   { name: "", yv: 42000, gv: 40000, rv: 30000 },
@@ -138,7 +138,7 @@ const HalfCircleProgressBar = ({ progress }) => {
 const Profile = () => {
   return (
     <section className="mx-5">
-      <div className="flex w-full">
+      <div className="hidden md:flex w-full">
         <div className="flex items-center w-[48%] h-[80px] bg-white p-4 rounded-lg shadow-lg">
           <Image src={profilePicture} alt="profile" className="my-auto" />
           <p className="text-[24px] ml-5">Welcome Back, John Doe</p>
@@ -182,13 +182,13 @@ const Profile = () => {
           <p className="ml-2">Bulk Order</p>
         </div>
       </div>
-      <div className="flex flex-1 justify-around my-5">
+      <div className="hidden md:flex flex-1 justify-around my-5">
         {profileIcons.map((icon, index) => (
           <Image key={index} src={icon} alt="icon" className="object-contain" />
         ))}
       </div>
-      <div className="grid md:grid-cols-6 grid-cols-2 gap-5 mt-4">
-        <div className="col-span-3 row-span-2 bg-white p-4 rounded-lg shadow-lg bg-red-500 ">
+      <div className="grid sm:grid-cols-6 grid-cols-2 gap-5 mt-4">
+        <div className="col-span-3 row-span-2 bg-white p-4 rounded-lg shadow-lg ">
           <div className="flex">
             <BlueDisk />
             <p>Net Sales</p>

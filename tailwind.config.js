@@ -6,10 +6,11 @@ module.exports = {
   ],
   theme: {
     screens: {
+      xs: "500px",
       sm: "800px",
-      md: "1100px",
-      lg: "1400px",
-      xl: "1600px",
+      md: "1200px",
+      lg: "1500px",
+      xl: "1800px",
     },
     extend: {
       fontFamily: { Helvetica: ["Helvetica", "sans-serif"] },

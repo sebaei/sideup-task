@@ -7,10 +7,8 @@ import { sidebarItems } from "../../public/constants";
 import { PurpleDisk, BlackDisk } from "../../public/constants";
 
 const Sidebar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
-    <div className="flex flex-col bg-white shadow-xl w-[15%]">
+    <div className="hidden sm:flex flex-col bg-white shadow-xl min-w-[15%] h-[100vh]">
       <Image
         src={sideupLogo}
         alt="logo"
