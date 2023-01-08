@@ -98,8 +98,8 @@ export const BlueDisk = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="19"
+      width="24"
+      height="24"
       viewBox="0 0 20 19"
       fill="none"
     >
@@ -122,3 +122,36 @@ export const BlueDisk = () => {
     </svg>
   );
 };
+
+export const Attempts = [
+  {
+    title: "Successfull Attempts",
+    color: "from-green-500",
+    total: 25,
+  },
+  {
+    title: "From First Attempt",
+    color: "from-orange-600",
+    total: 10,
+  },
+  {
+    title: "From Second Attempt",
+    color: "from-orange-600",
+    total: 3,
+  },
+  {
+    title: "From Third Attempt",
+    color: "from-orange-600",
+    total: 12,
+  },
+  {
+    title: "Returned",
+    color: "from-red-600",
+    total: 4,
+  },
+  {
+    title: "Canceled",
+    color: "from-black",
+    total: 1,
+  },
+];
