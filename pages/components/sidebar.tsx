@@ -4,13 +4,13 @@ import sideupLogo from "../../public/assets/sideupLogo.jpg";
 import disk from "../../public/assets/disk.jpg";
 
 import { sidebarItems } from "../../public/constants";
-// import { Disk } from "../../public/constants";
+import { PurpleDisk, BlackDisk } from "../../public/constants";
 
 const Sidebar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-col bg-white shadow-xl min-w-[229px]">
+    <div className="flex flex-col bg-white shadow-xl w-[15%]">
       <Image
         src={sideupLogo}
         alt="logo"
@@ -19,12 +19,12 @@ const Sidebar = () => {
       {sidebarItems.map((item, index) => (
         <div
           key={index}
-          className={`flex flex-row items-center ml-3  ${
+          className={`flex flex-row border-transparent cursor-pointer items-center pl-3  ${
             sidebarItems.length - 1 !== index ? "my-3" : "mt-20"
-          }`}
+          } active:border-l-[#CB3E90] active:border-2`}
         >
-          <Image src={disk} alt="disk" className="w-4 h-4" />
-          {/* <Disk fill={"#CB3E90"} /> */}
+          {/* <Image src={disk} alt="disk" className="w-4 h-4" /> */}
+          <PurpleDisk />
           <span className={`ml-2  active:text-[#CB3E90]`}>{item}</span>
         </div>
       ))}
