@@ -9,6 +9,7 @@ import EgyptFlag from "../../public/assets/EgyptFlag.png";
 import { useState } from "react";
 import { sidebarItems } from "../../public/constants";
 import { PurpleDisk, BlackDisk } from "../../public/constants";
+import styles from "../../public/style";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,12 +17,16 @@ const Navbar = () => {
     <>
       <div className="hidden sm:flex w-[60%] justify-end ml-auto  ">
         <button className="border-2 min-w-[206px] h-[50px] rounded-lg border-[#CB3E90] text-[#CB3E90] px-3  cursor-pointer my-5 mr-5">
-          <p>Generate Order Link</p>
+          <p className={`${styles.gridTitle}`}>Generate Order Link</p>
         </button>
-        <select className="border-2 w-[140px] h-[47px] rounded-lg border-[#CB3E90] text-[#CB3E90] pr-5 cursor-pointer my-5 mr-5">
+        <select
+          className={`border-2 w-[140px] h-[47px] rounded-lg border-[#CB3E90] text-[#CB3E90] pr-5 cursor-pointer my-5 mr-5 ${styles.gridTitle}`}
+        >
           <option>Request</option>
         </select>
-        <select className="border-2 w-[158px] h-[47px] rounded-lg border-[#CB3E90] bg-[#CB3E90]  text-white mr-2 my-5 pr-3 cursor-pointer">
+        <select
+          className={`border-2 w-[158px] h-[47px] rounded-lg border-[#CB3E90] bg-[#CB3E90]  text-white mr-2 my-5 pr-3 cursor-pointer font-poppins ${styles.gridTitle}`}
+        >
           <option>New Order</option>
         </select>
         <Image
@@ -30,19 +35,18 @@ const Navbar = () => {
           className="my-auto cursor-pointer"
         />
         <Image src={profile} alt="profile" className="my-auto cursor-pointer" />
-        <div className="hidden md:flex flex-col">
-          <div className="flex cursor-pointer mt-2 p-2">
-            {" "}
-            EN |
+        <div className="hidden md:flex flex-col ">
+          <div className="flex cursor-pointer mt-2 mr-5">
+            <p className={`${styles.languages}`}>EN |</p>
             <Image
               src={USFlag}
               alt="united states flag"
               className="ml-1.5 h-4 mt-1"
             />
           </div>
-          <div className="flex cursor-pointer mt-2 p-2">
-            {" "}
-            AR | <Image src={EgyptFlag} alt="egypt flag" />
+          <div className="flex cursor-pointer mt-2 mr-5">
+            <p className={`${styles.languages}`}>AR |</p>{" "}
+            <Image src={EgyptFlag} alt="egypt flag" />
           </div>
         </div>
       </div>

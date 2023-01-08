@@ -1,16 +1,17 @@
 import Image from "next/image";
 import profilePicture from "../../../public/assets/profilePicture.jpg";
-import singleOrder from "../../../public/assets/singleOrder.jpg";
-import bulkOrder from "../../../public/assets/bulkOrder.jpg";
 import { profileIcons } from "../../../public/constants";
+import styles from "../../../public/style";
 
 const Header = () => {
   return (
     <>
       <div className="hidden md:flex w-full">
-        <div className="flex items-center w-[48%] h-[80px] bg-white p-4 rounded-lg shadow-lg">
+        <div
+          className={`flex items-center w-[48%] h-[80px] bg-white p-4 rounded-lg shadow-lg `}
+        >
           <Image src={profilePicture} alt="profile" className="my-auto" />
-          <p className="text-[24px] ml-5">Welcome Back, John Doe</p>
+          <p className={`${styles.header} ml-5`}>Welcome Back, John Doe</p>
         </div>
         <div className="flex justify-start items-center w-[21%] h-[80px] bg-white pl-2 rounded-lg shadow-lg mx-auto cursor-pointer">
           {/* <Image src={singleOrder} alt="single" /> */}
@@ -28,7 +29,7 @@ const Header = () => {
               fill="#4278B8"
             />
           </svg>
-          <select className="ml-2 ">
+          <select className={`${styles.gridTitle}`}>
             <option>Single Order</option>
           </select>
         </div>
@@ -48,10 +49,10 @@ const Header = () => {
               fill="#4278B8"
             />
           </svg>
-          <p className="ml-2">Bulk Order</p>
+          <p className={`${styles.gridTitle} ml-2`}>Bulk Order</p>
         </div>
       </div>
-      <div className="hidden md:flex flex-1 justify-around my-5">
+      <div className="hidden md:flex flex-1 justify-between my-5">
         {profileIcons.map((icon, index) => (
           <Image key={index} src={icon} alt="icon" className="object-contain" />
         ))}

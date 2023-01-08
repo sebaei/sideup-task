@@ -133,7 +133,7 @@ export const RenderPieChart = () => {
   );
 };
 
-export const CircleProgressBar = ({ progress }) => {
+export const CircleProgressBar = ({ progress }: any) => {
   const radius = 30;
   const circumference = radius * 2 * Math.PI;
 
@@ -164,13 +164,13 @@ export const CircleProgressBar = ({ progress }) => {
   );
 };
 
-export const HalfCircleProgressBar = ({ progress }) => {
+export const HalfCircleProgressBar = ({ progress }: any) => {
   const radius = 30;
   const circumference = radius * Math.PI;
 
   return (
-    <div className="text-center mt-4">
-      <svg width={radius * 2} height={radius}>
+    <div className="relative">
+      <svg width={100} height={100}>
         <circle
           stroke="gray"
           strokeWidth="10"
@@ -192,7 +192,7 @@ export const HalfCircleProgressBar = ({ progress }) => {
           cy={radius}
         />
       </svg>
-      <div style={{ position: "relative", top: "-50%" }}>{`${progress}`}</div>
+      <div className="absolute top-[18%] left-[18%]">{`${progress}`}</div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import StatsGrid from "./statsGrid";
 
 const Profile = () => {
   return (
-    <section className="mx-5">
+    <section className="">
       <Header />
       <StatsGrid />
     </section>

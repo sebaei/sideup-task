@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import sideupLogo from "../../public/assets/sideupLogo.jpg";
-
+import styles from "../../public/style";
 import { sidebarItems } from "../../public/constants";
 import { PurpleDisk, BlackDisk } from "../../public/constants";
 
@@ -30,7 +30,7 @@ const Sidebar = () => {
           <span
             className={`ml-2  ${
               activeTab === item ? "text-[#CB3E90]" : "text-black"
-            }`}
+            } ${styles.sidebarTitle}`}
           >
             {item}
           </span>
