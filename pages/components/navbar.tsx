@@ -1,28 +1,37 @@
 import Image from "next/image";
-import notification from "../../public/assets/notification.jpg";
-import profile from "../../public/assets/profile.jpg";
-import USFlag from "../../public/assets/USFlag.jpg";
-import EgyptFlag from "../../public/assets/EgyptFlag.jpg";
+import notification from "../../public/assets/notification.png";
+import profile from "../../public/assets/profile.png";
+import USFlag from "../../public/assets/USFlag.png";
+import EgyptFlag from "../../public/assets/EgyptFlag.png";
 
 const Navbar = () => {
   return (
-    <div className="flex w-full justify-end">
-      <button className="border-2 rounded-lg border-[#CB3E90] text-[#CB3E90] p-4">
+    <div className="flex w-[60%] justify-around ml-auto  ">
+      <button className="border-2 rounded-lg border-[#CB3E90] text-[#CB3E90] px-3 cursor-pointer my-5 mr-5">
         Generate Order Link
       </button>
-      <select className="border-2 rounded-lg border-[#CB3E90] text-[#CB3E90]">
+      <select className="border-2 rounded-lg border-[#CB3E90] text-[#CB3E90] px-5 cursor-pointer my-5">
         <option>Request</option>
       </select>
-      <select className="border-2 rounded-lg border-[#CB3E90] bg-[#CB3E90]  text-white">
+      <select className="border-2 rounded-lg border-[#CB3E90] bg-[#CB3E90]  text-white mr-2 my-5 px-3 cursor-pointer">
         <option>New Order</option>
       </select>
-      <Image src={notification} alt="notification" />
-      <Image src={profile} alt="profile" />
+      <Image
+        src={notification}
+        alt="notification"
+        className="mr-2 my-auto cursor-pointer"
+      />
+      <Image
+        src={profile}
+        alt="profile"
+        className="mr-2 my-auto cursor-pointer"
+      />
       <div className="flex flex-col">
-        <div>
+        <div className=" cursor-pointer mt-2">
+          {" "}
           EN | <Image src={USFlag} alt="united states flag" />
         </div>
-        <div>
+        <div className="flex cursor-pointer mt-2">
           {" "}
           AR | <Image src={EgyptFlag} alt="egypt flag" />
         </div>

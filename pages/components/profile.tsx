@@ -15,10 +15,12 @@ import {
   Cell,
 } from "recharts";
 const data = [
-  { name: "week 1", yv: 42000, gv: 40000, rv: 30000 },
-  { name: "week 2", yv: 48000, gv: 22000, rv: 26000 },
-  { name: "week 3", yv: 27000, gv: 46000, rv: 24000 },
-  { name: "week 4", yv: 34000, gv: 42000, rv: 40000 },
+  { name: "", yv: 42000, gv: 40000, rv: 30000 },
+  { name: "week 1", yv: 50000, gv: 28000, rv: 34000 },
+  { name: "week 2", yv: 49500, gv: 22000, rv: 26000 },
+  { name: "week 3", yv: 28000, gv: 46000, rv: 26000 },
+  { name: "week 4", yv: 34000, gv: 45000, rv: 40000 },
+  { name: "", yv: 49000, gv: 38000, rv: 32000 },
 ];
 
 const RenderLineChart = () => {
@@ -28,12 +30,11 @@ const RenderLineChart = () => {
       <Line type="monotone" dataKey="yv" stroke="#FFFF00" />
       <Line type="monotone" dataKey="gv" stroke="#00FF00" />
       <Line type="monotone" dataKey="rv" stroke="#FF0000" />
-      <CartesianGrid
-        stroke="#ccc"
-        verticalPoints={[10000, 20000, 30000, 40000, 50000, 60000]}
-      />
-      <XAxis dataKey="name" />
-      <YAxis type="number" domain={[10000, 60000]} />
+
+      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+
+      <XAxis dataKey="name" strokeDasharray="5 5" />
+      <YAxis type="number" domain={[10000, 60000]} strokeDasharray="5 5" />
     </LineChart>
     // </ResponsiveContainer>
   );
@@ -67,15 +68,79 @@ const RenderPieChart = () => {
   );
 };
 
+const CircleProgressBar = ({ progress }) => {
+  const radius = 50;
+  const circumference = radius * 2 * Math.PI;
+
+  return (
+    <div className="text-center mt-4">
+      <svg width={radius * 2} height={radius * 2}>
+        <circle
+          stroke="#333"
+          strokeWidth="10"
+          fill="transparent"
+          r={radius}
+          cx={radius}
+          cy={radius}
+        />
+        <circle
+          stroke="#1abc9c"
+          strokeWidth="10"
+          strokeDasharray={`${circumference} ${circumference}`}
+          strokeDashoffset={`${((100 - progress) / 100) * circumference}`}
+          fill="transparent"
+          r={radius}
+          cx={radius}
+          cy={radius}
+        />
+      </svg>
+      <div style={{ position: "relative", top: "-50%" }}>{`${progress}%`}</div>
+    </div>
+  );
+};
+
+const HalfCircleProgressBar = ({ progress }) => {
+  const radius = 50;
+  const circumference = radius * Math.PI;
+
+  return (
+    <div className="text-center mt-4">
+      <svg width={radius * 2} height={radius}>
+        <circle
+          stroke="#333"
+          strokeWidth="10"
+          fill="transparent"
+          r={radius}
+          cx={radius}
+          cy={radius}
+          strokeDasharray={`${circumference} ${circumference}`}
+          strokeDashoffset="50"
+        />
+        <circle
+          stroke="#1abc9c"
+          strokeWidth="10"
+          strokeDasharray={`${circumference} ${circumference}`}
+          strokeDashoffset={`${((100 - progress) / 100) * circumference}`}
+          fill="transparent"
+          r={radius}
+          cx={radius}
+          cy={radius}
+        />
+      </svg>
+      <div style={{ position: "relative", top: "-50%" }}>{`${progress}%`}</div>
+    </div>
+  );
+};
+
 const Profile = () => {
   return (
-    <>
-      <div className="flex justify-evenly">
-        <div className="w-[40%] flex bg-white p-2 rounded-lg shadow-lg">
-          <Image src={profilePicture} alt="profile" />
-          <p>Welcome Back, John Doe</p>
+    <section className="mx-5 px-5">
+      <div className="flex w-full">
+        <div className=" flex min-w-[619px] h-[80px] bg-white p-4 rounded-lg shadow-lg">
+          <Image src={profilePicture} alt="profile" className="my-auto" />
+          <p className="text-[24px] ml-5">Welcome Back, John Doe</p>
         </div>
-        <div className="w-[20%] flex bg-white p-2 rounded-lg shadow-lg">
+        <div className="flex justify-start items-center w-[272px] h-[80px] bg-white p-2 rounded-lg shadow-lg mx-auto">
           {/* <Image src={singleOrder} alt="single" /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -91,16 +156,16 @@ const Profile = () => {
               fill="#4278B8"
             />
           </svg>
-          <select>
+          <select className="ml-2 ">
             <option>Single Order</option>
           </select>
         </div>
-        <div className="w-[20%] flex bg-white p-2 rounded-lg shadow-lg">
+        <div className="flex justify-center items-center w-[272px] h-[80px] bg-white p-2 rounded-lg shadow-lg">
           {/* <Image src={bulkOrder} alt="bulk" /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="22"
+            width="28"
+            height="28"
             viewBox="0 0 24 22"
             fill="none"
           >
@@ -111,10 +176,10 @@ const Profile = () => {
               fill="#4278B8"
             />
           </svg>
-          <p>Bulk Order</p>
+          <p className="ml-2">Bulk Order</p>
         </div>
       </div>
-      <div className="flex flex-1 justify-evenly my-3">
+      <div className="flex flex-1 justify-around my-5">
         {profileIcons.map((icon, index) => (
           <Image key={index} src={icon} alt="icon" className="object-contain" />
         ))}
@@ -267,7 +332,10 @@ const Profile = () => {
             <p>1</p>
           </div>
         </div>
-        <div className="bg-white">Daily Orders</div>
+        <div className="bg-white">
+          Daily Orders
+          <CircleProgressBar progress={63} />
+        </div>
         <div className="bg-white">
           Success Rate
           <div className="flex">
@@ -288,6 +356,7 @@ const Profile = () => {
           <p>New Customers</p>
           <div className="flex">
             {/* Graph */}
+            <HalfCircleProgressBar progress={75} />
             <p>Compared to Yesterday</p>
           </div>
         </div>
@@ -299,7 +368,7 @@ const Profile = () => {
           <p>Compared to Last Week</p>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
