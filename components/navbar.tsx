@@ -77,7 +77,7 @@ const Navbar = () => {
           )}
         </div>
         <div
-          className={`absolute top-0 h-screen w-full  backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${
+          className={`absolute top-0 h-screen w-[80%] backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${
             mobileMenuOpen ? "left-0" : "-left-full"
           }`}
         >
