@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profilePicture from "../../../public/assets/profilePicture.jpg";
+import profilePicture from "../../public/assets/profilePicture.jpg";
 import { profileIcons } from "../../public/constants";
 import styles from "../../public/style";
 import { SVG } from "../svgs";

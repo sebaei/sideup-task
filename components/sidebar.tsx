@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import sideupLogo from "../../public/assets/sideupLogo.jpg";
+import sideupLogo from "../public/assets/sideupLogo.jpg";
 import styles from "../public/style";
 import { sidebarItems } from "../public/constants";
 import { SVG } from "./svgs";

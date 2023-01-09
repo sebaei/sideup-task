@@ -5,6 +5,4 @@ Steps to run code:
 
 2 - Install node_modules using npm i
 
-3 - Run command "npm run dev"
-
-4 - Kindly ignore "Hydration error" if occurs everything still works the same
+3 - You can open project by using command "npm run build" then command "npm run start"
