@@ -1,4 +1,4 @@
-import styles from "../../../../public/style";
+import styles from "../../../public/style";
 import { SVG } from "../../svgs";
 import {
   RenderBarChart,

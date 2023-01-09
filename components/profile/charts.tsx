@@ -1,4 +1,4 @@
-import { profileIcons } from "../../../public/constants";
+import { profileIcons } from "../../public/constants";
 import {
   LineChart,
   Line,

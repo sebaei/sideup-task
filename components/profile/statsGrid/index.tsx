@@ -1,5 +1,5 @@
-import { Attempts } from "../../../../public/constants";
-import styles from "../../../../public/style";
+import { Attempts } from "../../../public/constants";
+import styles from "../../../public/style";
 import { SVG } from "../../svgs";
 import {
   CircleProgressBar,

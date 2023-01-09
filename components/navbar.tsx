@@ -7,8 +7,8 @@ import profile from "../../public/assets/profile.png";
 import USFlag from "../../public/assets/USFlag.png";
 import EgyptFlag from "../../public/assets/EgyptFlag.png";
 import { useState } from "react";
-import { sidebarItems } from "../../public/constants";
-import styles from "../../public/style";
+import { sidebarItems } from "../public/constants";
+import styles from "../public/style";
 import { SVG } from "./svgs";
 
 const Navbar = () => {
